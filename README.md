@@ -1,4 +1,4 @@
-## 一个基于 [vant-ui](http://s3.nsloop.com:20690/vant/index.html#/demo-markdown?nav=readme) 的移动开发cli
+## 一个基于 [vant-ui](http://s3.nsloop.com:20690/vant/index.html#/demo-markdown?nav=readme) 的移动开发环境
     
 ### 基础的页面过渡动画
     逻辑写在app.vue
