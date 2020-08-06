@@ -1,0 +1,286 @@
+@import './variables.scss';
+
+// 下拉/上拉刷新
+.mescroll {
+    -webkit-overflow-scrolling: touch;
+}
+
+// 修正上传组件form高度
+.g-core-image-upload-form {
+    height: 100% !important;
+}
+
+// 顶部fa图标纵向居中
+.van-nav-bar {
+    .fa-icon {
+        vertical-align: middle;
+    }
+
+    // 根据本项目原型 修改icon样式
+    .van-icon {
+        font-size: 24px;
+        color: #91949A;
+        font-weight: bold;
+    }
+}
+
+.sub-page {
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background-color: #f3f5f7;
+}
+
+// 修改弹出组件的input文字向右对齐
+.ui-popup {
+    .van-field__control {
+        text-align: right;
+    }
+}
+
+.van-tabs__line {
+    background-color: rgb(102, 177, 255);
+}
+
+.van-tag {
+    padding: .2em .8em;
+}
+
+.van-tag--danger {
+    background-color: #f25643;
+}
+
+.van-tag--primary {
+    background-color: #3296fa;
+}
+
+.van-tag--warning {
+    background-color: #ff943e;
+}
+
+.van-tag--success {
+    background-color: #15bc83;
+}
+
+.van-tag--plain {
+    background-color: #fff;
+}
+// 下拉组件内部容器样式
+.item-box {
+    padding: 10px;
+    position: relative;
+    // overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0.0625rem 0.375rem #d7e4ed;
+
+    &:first-child {
+        margin-top: 0px;
+    }
+
+    .time-box {
+        display: inline-flex;
+    }
+}
+// 新的tag样式
+.ui-tag {
+    height: 1.2rem;
+    min-width: 1.2rem;
+    font-size: 10px;
+    display: inline-flex;
+    color: #fff;
+    background-color: rgba(25, 31, 37, 0.28);
+    border-radius: .6rem;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+// 右下三角形tag
+.corner-tag {
+    position: absolute;
+    box-sizing: content-box;
+    text-align: center;
+    width: 3em;
+    padding: .6em 4em 3em;
+    right: -5em;
+    bottom: -2em;
+    font-size: 0.75rem;
+    transform: rotate(-45deg) scale(.6, .6);
+    opacity: .7;
+    color: #fff;
+}
+
+// 底部tab栏
+.footer-tab {
+    height: 3rem;
+    display: flex;
+    min-height: 50px;
+    .footer-tab-item {
+        flex: 1;
+        line-height: 3rem;
+        text-align: center;
+        background-color: #fff;
+        color: #9EA0A3;
+        font-size: 12px;
+    }
+
+    .footer-active {
+        background-color: #3296fa;
+        color: #fff;
+    }
+}
+
+// 手风琴容器内部样式
+.van-collapse {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0.0625rem 0.375rem #d7e4ed;
+
+    .van-collapse-item__content {
+        padding-top: 0;
+    }
+
+    .task-box {
+        .item-cols {
+            flex: 0 0 50%;
+
+            &:nth-child(even) {
+                border-left: 1px solid #ebedf0;
+                padding-left: 10px;
+            }
+        }
+
+        .cols-item-title {
+            margin: 10px 0 0 0;
+            font-size: 12px;
+        }
+
+        .cols-item-value {
+            font-size: 14px;
+            color: #000;
+            font-weight: 600;
+            margin: 2px 0 0 0;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+//时间轴样式
+.timeline {
+    position: relative;
+    padding: 2em 0;
+
+    &::before {
+        /* this is the vertical line */
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 18px;
+        height: 100%;
+        width: 2px;
+        background: #d7e4ed;
+    }
+
+    .timeline-block {
+        padding: 10px;
+        box-sizing: content-box;
+        min-height: 50px;
+        background-color: #fff;
+        margin-bottom: 2em;
+        margin-left: 38px;
+        position: relative;
+        border-radius: 5px;
+        box-shadow: 0 0.0625rem 0.375rem #d7e4ed;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 16px;
+            right: 100%;
+            height: 0;
+            width: 0;
+            border: 7px solid transparent;
+            border-right: 7px solid white;
+        }
+
+        .timeline-i {
+            display: block;
+            position: absolute;
+            left: -19px;
+            top: 14px;
+            width: 1.2rem;
+            height: 1.2rem;
+            line-height: 1.2rem;
+            border-radius: 50%;
+            transform: translateX(-50%);
+
+            .timeline-tag {
+                font-size: 10px;
+                color: #fff;
+                border-radius: 50%;
+                text-align: center;
+                z-index: 1;
+
+                &>div {
+                    transform: scale(.7, .7)
+                }
+            }
+        }
+
+        .van-textarea {
+            border-radius: 5px;
+            border: 1px solid #ebedf0;
+            .van-field__control {
+                padding: 5px;
+            }
+        }
+    }
+}
+
+// 隐藏组合筛选器
+.filter-box {
+    &>* {
+        display: none;
+    }
+}
+
+.van-picker-column{
+    font-size: 14px;
+}
+
+// 底部新增按钮
+.footer-box-add {
+	height: 0px;
+	display: flex;
+	justify-content: center;
+	position: relative;
+
+	& > i {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		display: block;
+		font-size: 14px;
+		color: #fff;
+		background: #3296fa;
+		padding: 10px;
+		border-radius: 50%;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	}
+}
+
+// 上传组件
+.van-uploader{
+    .van-uploader__preview{
+        & > div:first-child{
+            width: 77px;
+        }
+    }
+}
